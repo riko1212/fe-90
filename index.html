@@ -5,27 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbershop &#128136;</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="">
+    <header class="header">
+      <nav class="header-navigation">
+        <a href="" class="header-logo">
           <img src="./images/logo.svg" alt="site logo" />
         </a>
-        <ul>
-          <li><a href="">About</a></li>
-          <li><a href="">Services and prices</a></li>
-          <li><a href="">Barbers</a></li>
-          <li><a href="">Contacts</a></li>
+        <ul class="header-list">
+          <li class="header-item"><a class="header-link" href="#">About</a></li>
+          <li class="header-item">
+            <a class="header-link" href="">Services and prices</a>
+          </li>
+          <li class="header-item">
+            <a class="header-link" href="#">Barbers</a>
+          </li>
+          <li class="header-item">
+            <a class="header-link" href="">Contacts</a>
+          </li>
         </ul>
       </nav>
-      <address>
-        <a href="tel:+380441111111">+38 044 111 11 11</a>
+      <address class="header-address">
+        <a class="header-address-link" href="tel:+380441111111"
+          >+38 044 111 11 11</a
+        >
       </address>
-      <button type="button">Online-booking</button>
+      <button type="button" class="header-btn">Online-booking</button>
     </header>
     <main>
-      <section>
+      <section class="hero">
         <ul>
           <li>
             <a href target="_blank" rel="noopener noreferrer nofollow"
@@ -45,7 +60,7 @@
           and with style.
         </p>
       </section>
-      <section>
+      <section class="about">
         <ul>
           <li>
             <img
@@ -79,12 +94,12 @@
         </p>
         <button type="button">Online-booking</button>
       </section>
-      <section>
+      <section class="prices">
         <p>Spend your time with the best masters</p>
         <h2>Services and prices</h2>
         <ul>
           <li>
-            <p>Men’s haircut</p>
+            <p id="text">Men’s haircut</p>
             <p>from 300 uah.</p>
           </li>
           <li>
@@ -120,7 +135,7 @@
         </ul>
         <button type="button">Online-booking</button>
       </section>
-      <section>
+      <section class="benefits">
         <ul>
           <li>
             <span>600</span>
