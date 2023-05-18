@@ -76,6 +76,8 @@ img {
 }
 
 .btn {
+  min-width: 160px;
+  height: 40px;
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -83,6 +85,9 @@ img {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  background-color: transparent;
 }
 
 .container {
@@ -98,6 +103,29 @@ img {
 .header {
   padding-top: 32px;
   background-color: gray;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  margin-right: 130px;
+}
+
+.header-list {
+  display: flex;
+  gap: 30px;
+}
+
+.header-address {
+  margin-left: auto;
 }
 
 .header-link {
@@ -129,14 +157,27 @@ img {
 
 .header-btn {
   color: var(--first-btn-color);
+  margin-left: 40px;
 }
 
 /**-------------- HERO------------------ */
 
 .hero {
-  background-color: #615e5e;
 }
+
+.hero-container {
+  display: flex;
+}
+
+.hero-wrap {
+  background-color: #615e5e;
+  flex-grow: 1;
+  padding: 272px 100px 208px;
+  /* width: calc(100% - 100px); */
+}
+
 .hero-list {
+  width: 100px;
 }
 
 .hero-item {
@@ -172,6 +213,7 @@ img {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
+  max-width: 360px;
 }
 
 /**-------------- ABOUT------------------ */
@@ -181,7 +223,18 @@ img {
   padding-bottom: 120px;
 }
 
+.about-container {
+  display: flex;
+  gap: 30px;
+}
+
 .about-list {
+  display: flex;
+  gap: 30px;
+}
+
+.about-wrap {
+  padding-right: 100px;
 }
 
 .about-item {
@@ -238,12 +291,29 @@ img {
   margin-bottom: 44px;
 }
 
+.prices-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+
 .prices-list {
   border: 1px solid #ffffff;
   padding: 30px 20px;
+  width: calc((100% - 30px) / 2);
+  /* display: flex;
+  flex-direction: column;
+  gap: 20px; */
 }
 
 .prices-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.prices-item:last-child {
+  margin-bottom: 0;
 }
 
 .prices-item-text {
@@ -308,16 +378,21 @@ img {
 }
 .barbers-top-text {
   color: #303030;
+  margin-bottom: 20px;
 }
 
 .barbers-title {
   color: var(--second-title-color);
+  margin-bottom: 44px;
 }
 
 .barbers-list {
+  display: flex;
+  gap: 30px;
 }
 
 .barbers-item {
+  width: calc((100% - 60px) / 3);
 }
 
 .barbers-item-title {
@@ -340,14 +415,22 @@ img {
 /**-------------- Gallery------------------ */
 
 .gallery {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .gallery-top-text {
   color: #303030;
 }
 
 .gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 60px 30px; */
+  column-gap: 30px;
+  row-gap: 60px;
 }
 .gallery-item {
+  width: calc((100% - 90px) / 4);
 }
 
 /**-------------- ONLINE------------------ */
