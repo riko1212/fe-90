@@ -111,7 +111,9 @@ img {
 
 .header {
   padding-top: 32px;
-  background-color: gray;
+  position: absolute;
+  width: 100%;
+  top: 0;
 }
 
 .header-container {
@@ -193,8 +195,27 @@ img {
   /* width: calc(100% - 100px); */
 }
 
-.hero-list {
+.hero-soc {
   width: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 27px;
+  padding-bottom: 40px;
+}
+
+.hero-list {
+  display: flex;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
 }
 
 .hero-item {
@@ -509,6 +530,10 @@ img {
   width: calc((100% - 60px) / 3);
 }
 
+.barbers-item:hover .barbers-cover-text {
+  transform: translateY(0);
+}
+
 .barbers-item-title {
   font-weight: 400;
   font-size: 18px;
@@ -555,6 +580,24 @@ img {
 
 .barbers-soc-link:hover {
   background-color: teal;
+}
+
+.barbers-cover-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.barbers-cover-text {
+  position: absolute;
+  top: 0;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 40px;
+  background-color: #ff6c00;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
 }
 
 .test {
@@ -672,4 +715,47 @@ img {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 26, 36, 0.444);
+  top: 0;
+  transition: opacity 300ms linear, visibility 300ms linear;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms linear;
+  width: 500px;
+  min-height: 500px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleY(0);
+}
+
+.modal-close {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #999999;
+  border-radius: 50%;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.is-hidden {
+  visibility: none;
+  opacity: 0;
+  pointer-events: none;
 }
