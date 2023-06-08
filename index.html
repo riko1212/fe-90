@@ -433,39 +433,77 @@
         </div>
       </section>
 
-      <section class="online">
-        <h2 class="online-title section-title">Online-booking</h2>
-      </section>
+      <div class="contact-wrap">
+        <div class="container">
+          <section class="online">
+            <h2 class="online-title section-title">Online-booking</h2>
+            <form class="online-form">
+              <div class="online-field">
+                <input
+                  type="text"
+                  name="online-name"
+                  id="online-name"
+                  required
+                  class="online-input online-item"
+                  placeholder=" "
+                />
+                <label for="online-name" class="online-label">Name*</label>
+              </div>
+              <div class="online-field">
+                <input
+                  type="tel"
+                  name="online-tel"
+                  id="online-tel"
+                  required
+                  class="online-input online-item"
+                  placeholder=" "
+                />
+                <label for="online-tel" class="online-label">Phone*</label>
+              </div>
+              <div class="online-field online-mess-wrap">
+                <textarea
+                  name="online-mess"
+                  id="online-mess"
+                  class="online-text online-item"
+                  placeholder=" "
+                ></textarea>
+                <label for="online-mess" class="online-label">Message</label>
+              </div>
+              <button type="submit" class="btn online-btn">Send</button>
+            </form>
+          </section>
 
-      <section class="contacts">
-        <h2 class="contacts-title section-title">Contacts</h2>
-        <address class="contacts-address">
-          <ul class="contacts-list list">
-            <li class="contacts-item">
-              <a
-                class="contacts-link link bold"
-                href="https://goo.gl/maps/gdkC5Q5T3eGGuhff7"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >st. Vasylkivska, 7A<br />
-                Kyiv, 08132</a
-              >
-            </li>
-            <li class="contacts-item">
-              <a class="contacts-link link" href="tel:+380441111111"
-                >+38 044 111 11 11</a
-              >
-            </li>
-            <li class="contacts-item">
-              <a class="contacts-link" href="mailto:barbershop@email.com"
-                >barbershop@email.com</a
-              >
-            </li>
-          </ul>
-        </address>
-        <h3 class="contacts-subtitle">Working hours</h3>
-        <p class="contacts-schedule">Every day from 9:00 to 22:00</p>
-      </section>
+          <section class="contacts">
+            <h2 class="contacts-title section-title">Contacts</h2>
+            <address class="contacts-address">
+              <ul class="contacts-list list">
+                <li class="contacts-item">
+                  <a
+                    class="contacts-link link bold"
+                    href="https://goo.gl/maps/gdkC5Q5T3eGGuhff7"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >st. Vasylkivska, 7A<br />
+                    Kyiv, 08132</a
+                  >
+                </li>
+                <li class="contacts-item">
+                  <a class="contacts-link link" href="tel:+380441111111"
+                    >+38 044 111 11 11</a
+                  >
+                </li>
+                <li class="contacts-item">
+                  <a class="contacts-link" href="mailto:barbershop@email.com"
+                    >barbershop@email.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <h3 class="contacts-subtitle">Working hours</h3>
+            <p class="contacts-schedule">Every day from 9:00 to 22:00</p>
+          </section>
+        </div>
+      </div>
     </main>
 
     <footer>
@@ -481,7 +519,7 @@
         </li>
       </ul>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close>
           <svg class="modal-close-icon" width="8" height="8">
@@ -527,7 +565,6 @@
             name="user-tel"
             class="modal-input"
             placeholder="+380 (96) 111-11-11"
-            pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
             title="+380 (96) 111-11-11"
             required
           />
@@ -540,7 +577,24 @@
               placeholder="Коментар"
             ></textarea>
           </div>
-          <button type="submit">Send</button>
+          <div class="modal-field">
+            <input
+              type="checkbox"
+              id="privacy"
+              name="privacy"
+              value="true"
+              class="modal-check visually-hidden"
+            />
+            <label for="privacy" class="check-text">
+              <span>
+                <svg class="check-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              privacy <a href="">policy</a>
+            </label>
+          </div>
+          <button type="submit" class="send">Send</button>
         </form>
       </div>
     </div>
