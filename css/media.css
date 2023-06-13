@@ -1,0 +1,84 @@
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 448px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  /* barbers */
+
+  .barbers > .container,
+  .test > .container {
+    max-width: 480px;
+  }
+
+  .barbers {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .test {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .test-item {
+    width: calc((100% - 60px) / 3);
+  }
+  /* gallary */
+
+  .gallery {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .gallery-item {
+    width: calc((100% - 30px) / 2);
+  }
+
+  .gallery-top-text {
+    margin-bottom: 44px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .barbers > .container,
+  .test > .container {
+    max-width: 1200px;
+  }
+
+  .barbers {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .test {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .test-item {
+    width: calc((100% - 150px) / 6);
+  }
+
+  .barbers-item {
+    width: calc((100% - 60px) / 3);
+  }
+
+  .gallery {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .gallery-item {
+    width: calc((100% - 90px) / 4);
+  }
+}

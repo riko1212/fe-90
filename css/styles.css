@@ -38,6 +38,9 @@ ol {
 
 img {
   display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .list {
@@ -101,7 +104,7 @@ img {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -508,8 +511,8 @@ img {
 
 .barbers {
   background-color: #f7f7f7;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 84px;
+  padding-bottom: 84px;
 }
 .barbers-top-text {
   color: #303030;
@@ -523,11 +526,13 @@ img {
 
 .barbers-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .barbers-item {
-  width: calc((100% - 60px) / 3);
+  /* width: calc((100% - 60px) / 3); */
+  width: 100%;
 }
 
 .barbers-item:hover .barbers-cover-text {
@@ -601,17 +606,18 @@ img {
 }
 
 .test {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 84px;
+  padding-bottom: 84px;
 }
 
 .test-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .test-item {
-  width: calc((100% - 150px) / 6);
+  width: calc((100% - 30px) / 2);
   height: 90px;
 }
 .test-link {
@@ -648,22 +654,23 @@ img {
 /**-------------- Gallery------------------ */
 
 .gallery {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 84px;
+  padding-bottom: 84px;
 }
 .gallery-top-text {
   color: #303030;
+  margin-bottom: 71px;
 }
 
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
   /* gap: 60px 30px; */
-  column-gap: 30px;
-  row-gap: 60px;
+  gap: 30px;
 }
 .gallery-item {
-  width: calc((100% - 90px) / 4);
+  /* width: calc((100% - 90px) / 4); */
+  width: 100%;
 }
 
 .contact-wrap {
